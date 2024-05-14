@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   sync-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
