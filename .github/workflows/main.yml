@@ -7,6 +7,10 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
+      - name: Install Deps
+        run: |
+          sudo apt update
+          sudo apt install python3 ccache -y
       - name: Switch to Python2
         run: |
           sudo apt -y install python2
