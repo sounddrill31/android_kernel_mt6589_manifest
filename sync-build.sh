@@ -28,6 +28,10 @@ repo init -u https://github.com/sounddrill31/android_kernel_mt6589_manifest.git 
 echo "Syncing repository"
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --prune
 
+# Set up python2 environment
+python3 -m virtualenv -p python2 venv || true
+source venv/bin/activate
+
 # Build the kernel
 echo "Building kernel"
 cd kernel
