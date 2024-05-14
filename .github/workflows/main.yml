@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   sync-build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
@@ -11,6 +11,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install python3 ccache -y
+          curl -o libcloog-isl-dev_0.17.0-1_amd64.deb  http://security.ubuntu.com/ubuntu/pool/universe/c/cloog/libcloog-isl-dev_0.17.0-1_amd64.deb 
+          dpkg -i libcloog-isl-dev_0.17.0-1_amd64.deb 
       - name: Switch to Python2
         run: |
           sudo apt -y install python2
