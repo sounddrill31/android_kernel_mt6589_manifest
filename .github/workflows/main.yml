@@ -7,7 +7,15 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install python3 python2 -y
+          pip install virtualenv
+          virtualenv --python=python2 ~/.lineage_venv
       - name: Make the script file executable
         run: chmod +x sync-build.sh
       - name: Run the script
-        run: ./sync-build.sh
+        run: |
+          ~/.lineage_venv/bin/activate
+          ./sync-build.sh
