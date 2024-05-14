@@ -10,9 +10,9 @@
            sync-j="4"
            sync-c="true" />
 
-  <project path="manifest" name="Dr-Shadow/android_kernel_mt6589_manifest" />
-  <project path="kernel" name="Dr-Shadow/android_kernel_mt6589"  />
-  <project path="ramdisk" name="Dr-Shadow/ramdisk" remote="bb" />
+  <project path="manifest" name="sounddrill31/android_kernel_mt6589_manifest" revision="a109-experiments" />
+  <project path="kernel" name="sounddrill31/android_kernel_mt6589" revision="a109-experiments" />
+  <project path="ramdisk" name="sounddrill31/stock_ramdisk_micromax_a109" remote="gh" revision="yulong89_wet_kk-user-4.4.2-KOT49H-146-release-keys" />
   <project path="toolchain/arm-eabi-4.8" name="Dr-Shadow/arm-eabi-4.8" />
   <project path="mtk-tools" name="Dr-Shadow/mtk-tools" />
   <project path="scripts" name="Dr-Shadow/android_kernel_mt6589_scripts" />
