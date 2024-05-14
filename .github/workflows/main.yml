@@ -12,7 +12,7 @@ jobs:
           sudo apt update
           sudo apt install python3 ccache -y
           curl -o libcloog-isl-dev_0.17.0-1_amd64.deb  http://security.ubuntu.com/ubuntu/pool/universe/c/cloog/libcloog-isl-dev_0.17.0-1_amd64.deb 
-          dpkg -i libcloog-isl-dev_0.17.0-1_amd64.deb 
+          sudo dpkg -i libcloog-isl-dev_0.17.0-1_amd64.deb 
       - name: Switch to Python2
         run: |
           sudo apt -y install python2
