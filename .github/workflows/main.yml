@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
-      - uses: syphar/restore-virtualenv@v1
+      - uses: actions/setup-python@v5 
+        with:
+          python-version: '2.7' 
       - name: Make the script file executable
         run: chmod +x sync-build.sh
       - name: Run the script
