@@ -13,7 +13,7 @@ jobs:
           sudo rm -rf /usr/bin/python
           sudo ln -s /usr/bin/python2 /usr/bin/python
           # sudo ln -s /usr/bin/python3 /usr/bin/python3
-      continue-on-error: true
+        continue-on-error: true
       - name: Make the script file executable
         run: chmod +x sync-build.sh
       - name: Run the script
