@@ -30,3 +30,5 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --prune
 
 # Build the kernel
 echo "Building kernel"
+cd kernel
+./build.sh
